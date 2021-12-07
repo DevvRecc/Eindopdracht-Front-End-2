@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | DevvRecc</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <h2 class="logo">🅳🅴🆅🆅🆁🅴🅲🅲</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projecten.html">Projecten</a></li>
+                <li><a href="modules.html">Modules</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+            </ul>
+        </div>
+
+
+    <!-- Button  -->
+    
+    <button id="modal-open">Contact</button> 
+
+    <!-- Main Content -->
+
+    <h1 class="inf">About Me</h1>
+    <img class="sl" src="images/self.jpg">
+
+    <div class="aboutp">
+        <h2 class="inf2">Who am i?</h2>
+        <p>I am Recep Yildiz, 17 year young student from Amsterdam, born on the 19th of August in 2004. I got my Mavo education and I am still looking forward to get my MBO 4 and HBO education for software developing. Until my 3rd year of Mavo, I didn't know what I was going to do after I educated from middle school. My dad told me a story of his developer friend, after that story I knew i wanted to develop after middle school. </p>
+    </div>
+
+    <!-- Contact Button -->
+
+    <div id="contact-modal" class="modal">
+        <div id="modal-content">
+            <div id="modal-header">
+                <span class="close-modal">&times;</span>
+                <h2>DevvRecc</h2>
+            </div>
+            <div id="modal-body">
+                <h3>Send me a Message</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" placeholder="Enter Your First Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" placeholder="Enter Your Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Enter Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea placeholder="Enter Your Message"></textarea>
+                    </div>
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+            <div id="modal-footer">
+                <h3>DevvRecc &copy; 2021</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/functions.js"></script>
+</body>
+</html>

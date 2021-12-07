@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100;200;300;400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+/* M PLUS 1 code = Font 1 */
+/* Oswald = Font 2*/
+
+
+*{
+    margin: 0;  
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body{
+    background: linear-gradient(rgba(0, 45, 83, 0.733),rgba(8, 74, 131, 0.815));
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,136,255,0.2),rgba(40, 81, 117, 0.2)),url('http://www.hdwallpaper.nu/wp-content/uploads/2015/07/869c978552ff253563b883e6f808f066.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;   
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Main front content */
+
+.logo{
+    font-size: 50px;
+    cursor: pointer;
+    position: relative; 
+    top: -7px;
+    right: 30px;
+    color: #fff;
+}
+
+@keyframes fade-inout{
+    0%{ opacity: 0;}
+    100%{ opacity: 1;}
+}
+
+.welcome{
+    animation: fade-inout 3s infinite alternate;
+    font-size: 5em; 
+    text-align: center;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #1a75ff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p{
+    margin: 20px;
+    font-weight: 100;
+    line-height: 25px;
+    font-weight: 200;
+}
+
+.inst{
+    width: 200px;   
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #1a75ff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: #1a75ff;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}
+
+/* Foto en informatie van mezelf */
+
+.informatie .recep{
+    animation: fade-in 6s alternate;
+    position: relative;
+    left: 300px;
+    width: 600px;
+    bottom: 230px;
+}
+
+.informatie .verhaal{
+    animation: fade-in 6s alternate;
+    position: relative;
+    height: 602px;
+    width: 485px;
+    left: 1000px;
+    font-size: 20px; 
+    padding: 20px; 
+    border: 1px solid lightgray; 
+    margin: 50px;
+    bottom: 928px;
+}
+
+.informatie .verhaal .maintext{
+    font-family: 'M PLUS 1 code', sans-serif;
+    position: relative;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    top: 10px;
+}
+
+
+.informatie .verhaal p{
+    position: relative;
+    text-align: center;
+    display: flex;
+    color: white;
+    top: 50px;
+    font-family: 'M PLUS 1 code', sans-serif;
+    font-size: 20px;
+}
+
+/* Content Box Beneden */
+
+.contentbox{
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    margin: 240px auto;
+    bottom: 100px;
+}
+
+.contentbox .box{
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background-color: #1a75ff;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.contentbox .box .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    transition: 0.5s;
+ 
+}
+
+.contentbox .box:hover .icon{
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+}
+
+.contentbox .box .icon .fas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.contentbox .box:hover .icon .fas{
+    font-size: 40px;
+}
+
+.contentbox .box .incontent{
+    top: 100%;
+    position: absolute;
+    height: calc(100% - 100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.contentbox .box:hover .incontent{
+    top: 100px;
+    opacity: 1;
+}
+
+.contentbox .box .incontent h3{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.contentbox .box .incontent p{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.contentbox .box:nth-child(1) .icon{
+    background: #319635;
+}
+
+.contentbox .box:nth-child(1) {
+    background: #4caf50;
+}
+
+.contentbox .box:nth-child(2) .icon{
+    background: #d03852;
+}
+
+.contentbox .box:nth-child(2) {
+    background: #f54967;
+}
+
+.contentbox .box:nth-child(3) .icon{
+    background: #23798e;
+}
+
+.contentbox .box:nth-child(3) {
+    background: #328fa5;
+}
+
+/* Projecten Page */
+
+.projects{
+    animation: fade-in 3s alternate;
+    text-align: center;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+}
+
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.workingme{
+    animation: fade-in 4s alternate; 
+    position: absolute;
+    width: 500px;
+    left: 300px;
+    bottom: 50px;
+}
+
+.github{
+    animation: fade-in 4s alternate; 
+    position: relative;
+    height: 624px;
+    width: 485px;
+    bottom: 41px;
+    font-size: 20px; 
+    padding: 20px; 
+    border: 1px solid lightgray; 
+    margin: 50px;
+    left: 1000px;
+}
+
+.github .find{
+    font-family: 'M PLUS 1 code', sans-serif;
+    position: relative;
+    text-align: center;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    top: 150px;
+    font-weight: bold;
+}
+
+
+.github p{
+    position: relative;
+    text-align: center;
+    display: flex;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;;
+    color: white;
+    top: 200px;
+    font-family: 'M PLUS 1 code', sans-serif;
+    font-size: 20px;
+}
+
+.github a{
+    position: relative;
+    top: 200px;
+    left: 135px;
+    transition: 0.2s;
+}
+
+.github a:hover{
+    color: #1a75ff;
+    transition-delay: 1s;
+}
+
+/* Modules Page */
+
+.modules{
+    position: relative;
+    animation: fade-in 3s alternate;
+    text-align: center;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+}
+
+.latest{
+    animation: fade-in 4s alternate; 
+    position: relative;
+    width: 500px;
+    left: 300px;
+    top: 20px;
+}
+
+.code1{
+    animation: fade-in 4s alternate; 
+    position: absolute;
+    width: 700px;
+    left: 200px;
+    bottom: 50px;
+}
+
+.module{
+    animation: fade-in 4s alternate; 
+    position: relative;
+    height: 624px;
+    width: 485px;
+    font-size: 20px; 
+    padding: 20px; 
+    border: 1px solid lightgray; 
+    margin: 50px;
+    left: 1000px;
+    bottom: 427px;
+}
+
+.module .zoek{
+    font-family: 'M PLUS 1 code', sans-serif;
+    position: relative;
+    text-align: center;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    top: 50px;
+    font-weight: bold;
+}
+
+
+.module p{
+    position: relative;
+    text-align: center;
+    display: flex;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;;
+    color: white;
+    top: 100px;
+    font-family: 'M PLUS 1 code', sans-serif;
+    font-size: 20px;
+}
+
+/* Contact Pop Up / About Me Page */
+
+#modal-open{
+    animation: fade-in 3s alternate;
+    position: relative;
+    top: 50%;
+    left: 920px;
+    transition: background 0.3s;
+}
+
+#modal-open, input[type='submit']{
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #4586de;
+}
+
+#modal-open:hover{
+    background: #3e78c7;
+}
+
+#contact-modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+ 
+#modal-content{
+    background: #efefef;
+    margin: 35px auto;
+    width: 60%;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0,0.25);
+    animation-name: modalSlideup;
+    animation-duration: 1s;
+}
+
+#modal-header{
+    background: #4586de;
+    color: #fff;
+    padding: 25px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+#modal-header h2{
+    font-family: 'M PLUS 1 code', sans-serif;
+}
+
+#modal-header .close-modal{
+    font-size: 50px;
+    margin-left: 1540px;
+    top: 30px;
+}
+
+#modal-header .close-modal:hover{
+    color: #333;
+    cursor: pointer;
+}
+
+#modal-footer {
+    background: #4586de;
+    color: #fff;
+    padding: 25px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#modal-footer h3{
+    font-family: 'M PLUS 1 code', sans-serif;
+}
+
+#modal-body{
+    padding: 25px 30px;
+}
+
+#modal-body h3{
+    color: #4586de;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.form-group{
+    width: 75%;
+    margin: 20px 0;
+    margin-left: 12.5%;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.form-group input, textarea{
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+input[type='submit']{
+    font-size: 20px;
+    margin-bottom: 30px;
+    width: 75%;
+    margin-left: 12.5%;
+    transition: background 0.3s;
+}
+
+input[type='submit']:hover{
+    background: #3e78c7;
+}
+
+@keyframes modalSlideup {
+    0%{
+        transform: translateY(1500px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+
+/* About Me Page */
+
+.inf{
+    animation: fade-in 3s alternate;
+    text-align: center;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+}
+
+.sl{
+    animation: fade-in 4s alternate; 
+    position: relative;
+    width: 500px;
+    left: 370px;
+    top: 20px;
+}
+
+.aboutp{
+    animation: fade-in 4s alternate; 
+    position: relative;
+    height: 530px;
+    width: 485px;
+    font-size: 20px; 
+    padding: 20px; 
+    border: 1px solid lightgray; 
+    margin: 50px;
+    left: 1000px;
+    bottom: 607px;
+}
+
+.aboutp .inf2{
+    font-family: 'M PLUS 1 code', sans-serif;
+    position: relative;
+    text-align: center;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    top: 50px;
+    font-weight: bold;
+}
+
+.aboutp p{
+    position: relative;
+    text-align: center;
+    display: flex;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;;
+    color: white;
+    top: 100px;
+    font-family: 'M PLUS 1 code', sans-serif;
+    font-size: 20px;
+}
